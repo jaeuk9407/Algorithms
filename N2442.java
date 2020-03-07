@@ -16,9 +16,6 @@ public class N2442 {
 			for(int q=0; q<2*p+1; q++){
 				System.out.print("*");
 			}
-			for(int q=0; q<n-p-1; q++){
-				System.out.print(" ");
-			}
 			System.out.println("");
 			
 		}
