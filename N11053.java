@@ -23,8 +23,6 @@ public class N11053 {
 			for(int j=1; j<i;j++) {
 				if(array[i]>array[j] &&dp[i] <=dp[j]) {
 					dp[i] = dp[j]+1;
-				}else if(array[i] == array[j]) {
-					dp[i] =dp[j];
 				}
 			}
 		}
