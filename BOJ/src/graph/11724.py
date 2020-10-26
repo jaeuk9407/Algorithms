@@ -1,18 +1,21 @@
 #오답 - 시간 초과
+import sys
+sys.setrecursionlimit(10000)
 
 def dfs(graph, v, visited):
     # 현재 위치를 방문한 적이 없다면, 인접 노드 호출하고 True 처리
     if not visited[v]:
         visited[v] = True
+        #print("DFS 호출 순서: " + str(graph[v]))
         for i in range(len(graph[v])):
             # 인접한 노드 재귀 호출
             dfs(graph, graph[v][i], visited)
-        #print("graph[v][i]: "+str(graph[v])+"returnTrue")
+        #print("DFS 끝나는 순서: "+str(graph[v])+"returnTrue")
         return True
     return False
 
 
-n, m = map(int, input().split())
+n, m = map(int, sys.stdin.readline().split())
 
 graph = []
 
@@ -20,11 +23,9 @@ for i in range(n + 1):
     graph.append([])
 
 for i in range(m):
-    u, v = map(int, input().split())
-    if v not in graph[u]:
-        graph[u].append(v)
-    if u not in graph[v]:
-        graph[v].append(u)
+    u, v = map(int, sys.stdin.readline().split())
+    graph[u].append(v)
+    graph[v].append(u)
 
 visited = [False] * (n + 1)
 result = 0
