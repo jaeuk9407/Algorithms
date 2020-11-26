@@ -37,7 +37,7 @@ for i in range(n):
                         if a[nx][ny] == 1 and g[nx][ny] == 0:
                             g[nx][ny] = cnt
                             q.append((nx, ny))
-print("g:", g)
+
 
 q = []
 for i in range(0, n):
@@ -63,8 +63,7 @@ while len(q):
                 g[nx][ny] = g[x][y]
                 q.append((nx, ny))
 
-print("d:", d)
-print("g:", g)
+
 ans = -1
 for i in range(0, n):
     for j in range(0, n):
