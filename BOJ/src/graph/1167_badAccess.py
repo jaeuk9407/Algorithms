@@ -14,17 +14,16 @@ for i in range(v):
 result_first = [0 for _ in range(v+1)]
 
 
-def DFS(start_node, now_node, matrix, result):
-    for e, d in matrix[now_node]:
-        # 경로 정보가 입력되지 않은 간선
-        # *** result[start]는 항상 0이어야 하므로, 값을 변경하면 안된다 *** 주의!
-        if result[e] == 0 and e != start_node:
-            result[e] = result[now_node]+d
-            DFS(now_node, e, matrix, result)
+def DFS(start, matrix, result):
+    for e, d in matrix[start]:
+        if result[e] == 0:
+            result[e] = result[start]+d
+            DFS(e, matrix, result)
 
 
-DFS(1, 1, node_graph, result_first) # 아무 노드에서 시작해준다
+DFS(1, node_graph, result_first) # 아무 노드에서 시작해준다
 result_first[1] = 0 # 루트 노드가 정해져 있지 않아 양방향으로 입력을 받기 때문에 해당
+
 
 tmpmax = 0 # 최댓값 구하기
 index = 0 # 최장경로 노드
@@ -36,6 +35,6 @@ for i in range(len(result_first)):
 
 # 최장경로 노드에서 다시 DFS를 통해 트리의 지름을 구함
 result_final = [0 for _ in range(v+1)]
-DFS(index, index, node_graph, result_final)
+DFS(index, node_graph, result_final)
 result_final[index] = 0
 print(max(result_final))
