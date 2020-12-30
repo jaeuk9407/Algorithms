@@ -6,3 +6,4 @@ error_buttons = []
 if m != 0:
     error_buttons = list(input().split())
 
+
