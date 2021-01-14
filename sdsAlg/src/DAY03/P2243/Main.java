@@ -27,8 +27,6 @@ public class Main {
 			int a = Integer.parseInt(st.nextToken()); // Type of Action
 			int b = Integer.parseInt(st.nextToken()); // Rank to pop || flavor to pop & push
 			
-			// S를 어떻게 잡아야 하는가, tree 구조를 어떻게 만들어야 노드가 맛과 순위를 함께 갖고 있을 수 있나
-			
 			if(a == 1) {
 				// internal node에서 범위를 찾아들어간다. 1~S
 				int index = query(1, 1, S, b);

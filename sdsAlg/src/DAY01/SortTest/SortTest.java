@@ -38,8 +38,8 @@ public class SortTest {
 //		list.sort();
 		Collections.sort(list);
 		System.out.println(list);
-		// Comparable 객체의 정렬 조건이 고정적일 때 -> Comparable를 자주 사용
-		// Comparable 객체의 정렬 조건이 다양할 때 -> Comparator를 자주 사용
+		// 객체의 정렬 조건이 고정적일 때 -> Comparable를 자주 사용
+		// 객체의 정렬 조건이 다양할 때 -> Comparator를 자주 사용
 		
 		Collections.sort(list, new Comparator<Person>() {
 			@Override
