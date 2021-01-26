@@ -7,12 +7,12 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class P1963 {
-	static int N, CNT[];
-	static boolean prime[];
-	static Queue<Integer> q;
+	private static int N, CNT[];
+	private static boolean prime[];
+	private static Queue<Integer> q;
 	
 	// 에라토스테네스의 체 -> 범위 내 소수 찾기  
-	static void eratos() {
+	private static void eratos() {
 		for(int i = 2; i * i < 10000; i++) {
 			for(int j = i * i; j < 10000; j+=i) {
 				prime[j] = false;
@@ -21,7 +21,7 @@ public class P1963 {
 	}
 	
 	// BFS 컨셉으로 모든 소수로의 최소 변경 횟수 기록
-	static void bfs(int s) {
+	private static void bfs(int s) {
 		q.add(s);
 		CNT[s] = 0;
 		
