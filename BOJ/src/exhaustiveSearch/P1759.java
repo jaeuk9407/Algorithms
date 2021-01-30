@@ -24,15 +24,15 @@ public class P1759 {
 		for(int i = 0; i < C; i++) {
 			arr[i] = st.nextToken().charAt(0);
 		}
-//		System.out.println(Arrays.toString(arr));
 		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
 		dfs(0, 0, 0, 0);
 		
 	}
 	
 	// 시작점, 선택된 문자 개수, 자음 개수, 모음 개수
 	private static void dfs(int start, int depth, int ja, int mo) {
-//		System.out.println("dfs 시작! "+start+ ", "+depth+", "+ja+", "+mo);
+		System.out.println("dfs 시작! "+start+ ", "+depth+", "+ja+", "+mo);
 		for(int i = start; i < C; i++) {
 			result[i] = 1;
 			
