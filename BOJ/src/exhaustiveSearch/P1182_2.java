@@ -2,16 +2,13 @@ package exhaustiveSearch;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class P1182 {
-	
-	static int arr[];
-	static int N, S, cnt = 0;
-	
+public class P1182_2 {
+
+	static int N, S;
+	static int arr[], result[];
+	static int cnt;
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -20,14 +17,13 @@ public class P1182 {
 		S = Integer.parseInt(st.nextToken());
 		
 		arr = new int[N];
+		
 		st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < N; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
-		Arrays.sort(arr);
-		dfs(0,0);
 		
-		// S가 0인 경우 하나도 고르지 않은 경우가 카운팅되므로 빼준다.
+		dfs(0, 0);
 		if(S == 0) {
 			System.out.println(cnt-1);
 		}else {
@@ -35,13 +31,14 @@ public class P1182 {
 		}
 	}
 	
-	private static void dfs(int v, int su) {
-		if(v == N) {
-			if(su == S) cnt++;
+	private static void dfs(int index, int sum) {
+		if(index == N) {
+			if(sum == S) {
+				cnt++;
+			}
 			return;
 		}
-		
-		dfs(v+1, su + arr[v]);
-		dfs(v+1, su);
+		dfs(index+1, sum+arr[index]);
+		dfs(index+1, sum);
 	}
 }
