@@ -47,12 +47,12 @@ public class Main {
 	}
 	
 	private static void parentUnion(int a, int b) {
-		int parentA = parentFind(a);
-		int parentB = parentFind(b);
-		if(parentA < parentB) {
-			parents[b] = parentA;
+		a = parentFind(a);
+		b = parentFind(b);
+		if(a < b) {
+			parents[b] = a;
 		}else {
-			parents[a] = parentB;
+			parents[a] = b;
 		}
 	}
 }
