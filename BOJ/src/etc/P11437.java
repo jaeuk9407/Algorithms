@@ -10,6 +10,7 @@ public class P11437 {
 	static ArrayList<Integer> edges[];
 	static int N, M;
 	static int depths[], parents[];
+	static int root;
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -36,8 +37,8 @@ public class P11437 {
 			edges[a].add(b);
 			edges[b].add(a);
 		}
-		
-		findDepth(1, 0);
+		root = 1;
+		findDepth(root, 0);
 		
 		M = Integer.parseInt(br.readLine());
 		for(int i = 0; i < M; i++) {
@@ -55,7 +56,7 @@ public class P11437 {
 		depths[index] = depth;
 		
 		// leaf Node이면 탐색 종료
-		if(edges[index].size() == 0) {
+		if(edges[index].size() == 1 && index != root) {
 			return;
 		}
 		
