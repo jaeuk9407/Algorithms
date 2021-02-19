@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 public class Main {
 	static int N, M, K, S;
-	static int[] nums;
+	static long[] nums;
 	static long[] tree;
 	
 	public static void main(String[] args) throws Exception {
@@ -23,10 +23,10 @@ public class Main {
 		}
 		
 		tree = new long[2 * S];
-		nums = new int[N + 1];
+		nums = new long[N + 1];
 		
 		for(int i = 1; i <= N; i++) {
-			nums[i] = Integer.parseInt(br.readLine());
+			nums[i] = Long.parseLong(br.readLine());
 		}
 		makeTree(1, 1, S);
 		
@@ -34,7 +34,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
+			long c = Long.parseLong(st.nextToken());
 			
 			if(a == 1) {
 				// b번째 수를 c로 update
@@ -65,7 +65,7 @@ public class Main {
 		return tree[node];
 	}
 	
-	static long query(int node, int left, int right, int qLeft, int qRight) {
+	static long query(int node, int left, int right, long qLeft, long qRight) {
 		if(qRight < left || right < qLeft) { // query 범위 밖
 			return 0;
 		}else if(qLeft <= left && right <= qRight) { // query에 속함
