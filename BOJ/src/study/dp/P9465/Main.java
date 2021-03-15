@@ -44,8 +44,8 @@ public class Main {
 			dp[2][index] = Math.max(dp[0][index-1], dp[1][index - 1]) + stickers[1][index];
 		}
 		
-		int result = Math.max(dp[0][N-1], Math.max(dp[0][N-1], dp[2][N-1]));
-		System.out.println(dp[0][N-1]+","+dp[1][N-1]+","+dp[2][N-1]);
+		int result = Math.max(dp[0][N-1], Math.max(dp[1][N-1], dp[2][N-1]));
+//		System.out.println(dp[0][N-1]+","+dp[1][N-1]+","+dp[2][N-1]);
 		
 		return result;
 	}
