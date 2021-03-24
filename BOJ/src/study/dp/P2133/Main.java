@@ -18,7 +18,7 @@ public class Main {
 			dp[2] = 3;
 			dp[0] = 1;
 			
-			for(int i = 4; i < N; i += 2) {
+			for(int i = 4; i <= N; i += 2) {
 				for(int j = 2; j <= i; j += 2) {
 					int newShape = j == 2 ? 3 : 2;
 					dp[i] += newShape * dp[i-j];
@@ -29,4 +29,3 @@ public class Main {
 		System.out.println(answer);
 	}
 }
-
