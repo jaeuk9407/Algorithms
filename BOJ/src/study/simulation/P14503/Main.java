@@ -117,7 +117,6 @@ public class Main {
 	// 왼쪽 방향에 청소할 공간 있는지 확인
 	static boolean inspectLeft(int dir) {
 		if(dir == 0) {	// 북쪽 방향을 바라보는 경우
-			
 			// 좌측에 공간이 존재하고
 			if(col > 0) {
 				// 벽이 아니면서 아직 청소하지 않은 공간이면 true 반환
