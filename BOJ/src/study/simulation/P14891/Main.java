@@ -77,6 +77,7 @@ public class Main {
     // isValid에 저장된 방향으로 바퀴 회전
     static void rotate(int[] isValid) {
         for (int i = 0; i < 4; i++) {
+        	// 현재 바퀴가 회전해야 할 바퀴이면 
             if (isValid[i] != 0) {
                 int[] temp = new int[8];
 
