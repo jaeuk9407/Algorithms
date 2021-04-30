@@ -11,7 +11,7 @@ class Solution {
         int completedCount = 0;
         
         // 현재 시점 실행할 수 있는 작업들의 대기 큐
-        PriorityQueue<Job> waitQ = new PriorityQueue<>(new Comparator<>(){
+        PriorityQueue<Job> waitQ = new PriorityQueue<>(new Comparator<Job>(){
            @Override
             public int compare(Job o1, Job o2){
                 if(o1.timeCost <= o2.timeCost){
@@ -22,7 +22,7 @@ class Solution {
         });
         
         // 현재 시점 실행할 수 없는 작업들의 대기 큐
-        PriorityQueue<Job> restQ = new PriorityQueue<>(new Comparator<>(){
+        PriorityQueue<Job> restQ = new PriorityQueue<>(new Comparator<Job>(){
            @Override
             public int compare(Job o1, Job o2){
                 if(o1.inTime <= o2.inTime){
@@ -51,6 +51,7 @@ class Solution {
                 // 2.2. 처리할 수 있는 작업으로 처리
                 waitQ.add(next);
             }
+            
             // 3. 현재 시점에 처리할 수 있으면(1, 2에 의해 반드시 가능)
             // 3.1. 그 중 수행시간이 가장 짧은 작업 수행
             Job now = waitQ.poll();
@@ -65,7 +66,6 @@ class Solution {
         answer = getAvg(timeCosts);
         return answer;
     }
-    
     // 현재 시간에 수행할 수 있는 Job을 대기 큐로 삽입함
     public void getEnableJobs(PriorityQueue<Job> waitQ, PriorityQueue<Job> restQ, int time){
         while(!restQ.isEmpty()){
