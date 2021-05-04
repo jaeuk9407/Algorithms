@@ -19,7 +19,6 @@ class Solution {
             // 힙에서 하나씩 빼며 삭제
             while(pq.peek().value < numArr[i]){
                 Info now = pq.poll();
-                // System.out.println(now.index+"번 index, value:"+now.value +"제거");
                 isRemoved[now.index] = true;
                 cnt++;
                 // 삭제한 숫자 개수가 k와 같아지면 삭제 멈춤
