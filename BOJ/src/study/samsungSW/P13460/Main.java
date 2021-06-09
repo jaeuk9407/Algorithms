@@ -9,7 +9,6 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
-	static final int RED = 0, BLUE = 1;
 	static int N, M;
 	static char[][] map;
 	static boolean[][][][] visited;
@@ -105,7 +104,7 @@ public class Main {
 					q.offer(new Node(rn[0], rn[1], bn[0], bn[1], node.cnt + 1));
 				}
 			} // end of for(동,서,남,북)
-		}
+		} // end of while
 		System.out.println(-1);
 	}
 	
@@ -144,14 +143,8 @@ public class Main {
 		nxtR[1] = rnCol;
 		return nxtR;
 	}
-	// map 정보 출력
-	public static void showMap(int[][] map) {
-		for(int i = 0; i < N; i++) {
-			System.out.println(Arrays.toString(map[i]));
-		}
-		System.out.println();
-	}
 }
+
 class Node{
 	int rRow; int rCol;
 	int bRow; int bCol;
