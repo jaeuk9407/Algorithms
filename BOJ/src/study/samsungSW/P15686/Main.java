@@ -27,7 +27,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			for(int j = 0; j < n; j++) {
 				board[i][j] = Integer.parseInt(st.nextToken());
-				// ÁýÀÌ¸é ¸®½ºÆ®¿¡ Ãß°¡ÇØ³õÀ½
+				// ì§‘ì´ë©´ ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•´ë†“ìŒ
 				if(board[i][j] == 1) {
 					houses.add(new Info(i, j, 1));
 				}else if(board[i][j] == 2) {
@@ -40,39 +40,39 @@ public class Main {
 	}
 	
 	public static void dfs(int start, int cnt) {
-		// Ä¡Å²ÁýÀ» m°³ ¿ÀÇÂÇÑ °æ¿ì µµ½ÃÀÇ Ä¡Å²°Å¸® °è»ê
+		// ì¹˜í‚¨ì§‘ì„ mê°œ ì˜¤í”ˆí•œ ê²½ìš° ë„ì‹œì˜ ì¹˜í‚¨ê±°ë¦¬ ê³„ì‚°
 		if(cnt == m) {
 			int cityDist = calculate();
 			answer = Math.min(answer, cityDist);
 		}
 		
-		// m°³ ¹Ì¸¸ ¿ÀÇÂÇÑ °æ¿ì ¿ÀÇÂ
+		// mê°œ ë¯¸ë§Œ ì˜¤í”ˆí•œ ê²½ìš° ì˜¤í”ˆ
 		for(int i = start; i < chickens.size(); i++) {
 			Info now = chickens.get(i);
-			// ¿ÀÇÂÇØ¼­ dfs È£Ãâ
+			// ì˜¤í”ˆí•´ì„œ dfs í˜¸ì¶œ
 			selected.push(now);
 			dfs(i + 1, cnt + 1);
-			// È£Ãâ ÈÄ ¿ø»óº¹±¸
+			// í˜¸ì¶œ í›„ ì›ìƒë³µêµ¬
 			selected.pop();
 		}
 	} // end of dfs
 	
 	public static int calculate() {
 		int cityMinDist = 0;
-		// ÁýÀ» ÇÏ³ª¾¿ °ñ¶ó
+		// ì§‘ì„ í•˜ë‚˜ì”© ê³¨ë¼
 		for(int i = 0; i < houses.size(); i++) {
 			Info nowHouse = houses.get(i);
 			int minDist = Integer.MAX_VALUE;
-			// Ä¡Å²Áý¸¶´Ù °Å¸®¸¦ °è»êÇÏ°í ÃÖ¼Ò Ä¡Å²°Å¸® °»½Å °¡´ÉÇÏ¸é °»½Å
+			// ì¹˜í‚¨ì§‘ë§ˆë‹¤ ê±°ë¦¬ë¥¼ ê³„ì‚°í•˜ê³  ìµœì†Œ ì¹˜í‚¨ê±°ë¦¬ ê°±ì‹  ê°€ëŠ¥í•˜ë©´ ê°±ì‹ 
 			for(int j = 0; j < selected.size(); j++) {
 				Info nowChicken = selected.get(j);
-				// ÇöÀç Áý°ú Ä¡Å²Áý °Å¸® °è»ê
+				// í˜„ìž¬ ì§‘ê³¼ ì¹˜í‚¨ì§‘ ê±°ë¦¬ ê³„ì‚°
 				int dist = Math.abs(nowHouse.row - nowChicken.row) 
 						+ Math.abs(nowHouse.col - nowChicken.col);
-				// ÃÖ¼Ò Ä¡Å²°Å¸® °»½Å °¡´ÉÇÏ¸é °»½Å
+				// ìµœì†Œ ì¹˜í‚¨ê±°ë¦¬ ê°±ì‹  ê°€ëŠ¥í•˜ë©´ ê°±ì‹ 
 				minDist = Math.min(dist, minDist);
 			}
-			// ÇöÀç Áý¿¡¼­ °¡Àå °¡±î¿î Ä¡Å²°Å¸®¸¦ µµ½Ã Ä¡Å²°Å¸®¿¡ ¹Ý¿µ
+			// í˜„ìž¬ ì§‘ì—ì„œ ê°€ìž¥ ê°€ê¹Œìš´ ì¹˜í‚¨ê±°ë¦¬ë¥¼ ë„ì‹œ ì¹˜í‚¨ê±°ë¦¬ì— ë°˜ì˜
 			cityMinDist += minDist;
 		}
 		return cityMinDist;
