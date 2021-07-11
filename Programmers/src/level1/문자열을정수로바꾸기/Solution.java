@@ -1,13 +1,13 @@
-package level1.¹®ÀÚ¿­À»Á¤¼ö·Î¹Ù²Ù±â;
+package level1.ë¬¸ìžì—´ì„ì •ìˆ˜ë¡œë°”ê¾¸ê¸°;
 
 class Solution {
     public int solution(String s) {
         int answer = 0;
-        // Ã¹¹øÂ° ±ÛÀÚ°¡ À½¼ö ±âÈ£ÀÌ¸é, ±âÈ£¸¦ Á¦¿ÜÇÏ°í ³ª¸ÓÁö ¹®ÀÚ¿­À» ¼ýÀÚ·Î º¯È¯ÇÑ µÚ, -1À» °öÇØÁÜ
+        // Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Ì¸ï¿½, ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½, -1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if(s.charAt(0) == '-'){
             answer = Integer.valueOf(s.substring(1)) * -1;
         }else{
-            // ¸ðµç ±ÛÀÚ°¡ ¼ýÀÚÀÌ¸é ±×´ë·Î ¼ýÀÚ·Î º¯È¯
+            // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
             answer = Integer.valueOf(s);
         }
         return answer;

@@ -1,4 +1,4 @@
-package level1.´ÙÆ®°ÔÀÓ;
+package level1.ë‹¤íŠ¸ê²Œìž„;
 
 import java.util.*;
 
@@ -6,17 +6,17 @@ class Solution {
     public int solution(String dartResult) {
         int answer = 0;
         
-        // °ÔÀÓ ´ÜÀ§·Î parsing
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ parsing
         String[] results = parseGame(dartResult);
-        // °ÔÀÓ ´ÜÀ§ Á¡¼ö¸¦ ´ãÀ» ½ºÅÃ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Stack<Integer> stack = new Stack<>();
         
-        // °¢ °ÔÀÓ Á¡¼ö °è»ê
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         calc(results[0], stack);
         calc(results[1], stack);
         calc(results[2], stack);
         
-        // °ÔÀÓ °á°ú¸¦ ´õÇØ ÃÑ Á¡¼ö °è»ê
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         while(!stack.isEmpty()){
             answer += stack.pop();
         }
@@ -24,22 +24,22 @@ class Solution {
         return answer;
     }
     
-    // °ÔÀÓ Â÷·Ê ´ÜÀ§ Á¡¼ö °è»ê
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     public void calc(String game, Stack<Integer> stack){
         int number = -1;
         char bonus = '-';
         char option = '-';
         
         int index = 0;
-        // ÇÑ °ÔÀÓÀÇ °á°ú¸¦ ¹ÙÅÁÀ¸·Î Á¡¼ö, º¸³Ê½º, ¿É¼ÇÀ» ÆÄ½Ì
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ê½ï¿½, ï¿½É¼ï¿½ï¿½ï¿½ ï¿½Ä½ï¿½
         while(index < game.length()){
             char now = game.charAt(index);
-            // º¸³Ê½º °ªÀÇ index¸¦ Ã£À¸¸é ±× ¾ÕÀº Á¡¼ö, µÚ´Â optionÀ¸·Î ÆÄ½Ì
+            // ï¿½ï¿½ï¿½Ê½ï¿½ ï¿½ï¿½ï¿½ï¿½ indexï¿½ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ú´ï¿½ optionï¿½ï¿½ï¿½ï¿½ ï¿½Ä½ï¿½
             if(now == 'S' || now == 'D' || now == 'T'){
-                // number¿Í bonus ÀÔ·Â
+                // numberï¿½ï¿½ bonus ï¿½Ô·ï¿½
                 number = Integer.parseInt(game.substring(0, index));
                 bonus = game.charAt(index);
-                // bonus µÚ¿¡ ¹®ÀÚ°¡ ´õ ÀÖ´Ù¸é option°ªÀ¸·Î ÀÔ·Â
+                // bonus ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½ optionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
                 if(index < game.length() - 1){
                     option = game.charAt(index + 1);
                 }
@@ -57,51 +57,51 @@ class Solution {
         
         // option processing
         if(option == '*'){
-            // *ÀÇ °æ¿ì ÀÌÀü °ÔÀÓÀÌ Á¸ÀçÇÏ¸é ²¨³»¼­ *2ÇØ¼­ ´Ù½Ã ³ÖÀ½
+            // *ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *2ï¿½Ø¼ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if(!stack.isEmpty()){
                 int before = stack.pop();
                 before *= 2;
                 stack.push(before);
             }
-            // ÇöÀç °ÔÀÓ Á¡¼ö * 2
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ * 2
             stack.push(number * 2);            
         }else if(option == '#'){
-            // #ÀÇ °æ¿ì ÇöÀç °ÔÀÓ Á¡¼ö¸¸ -1À» °öÇØ ³ÖÀ½
+            // #ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             stack.push(number * (-1));
         }else{
-            // optionÀÌ ¾ø´Â °æ¿ì ±×´ë·Î ³ÖÀ½
+            // optionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             stack.push(number);
         }
     }// end of calc()
     
-    // ÁÖ¾îÁø ¹®ÀÚ¿­À¸·Î 3°³ °ÔÀÓ °á°ú¸¦ °¢°¢ ÆÄ½ÌÇØ ¹ÝÈ¯
+    // ï¿½Ö¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
     public String[] parseGame(String dartResult){
         String[] results = new String[3];
-        int keyIndex = 0;   // resultsÀÇ index
-        int start = 0;  // parsingÀ» ½ÃÀÛÇÒ index
-        int end = -1;   // parsingÀÇ ¸¶Áö¸· index(ÇØ´ç°ª ºñÆ÷ÇÔ)
-        int index = 0;  // dartResult Å½»ö ÀÎµ¦½º
+        int keyIndex = 0;   // resultsï¿½ï¿½ index
+        int start = 0;  // parsingï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ index
+        int end = -1;   // parsingï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ index(ï¿½Ø´ç°ª ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+        int index = 0;  // dartResult Å½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
         
-        // dartResult¸¦ Ã³À½ºÎÅÍ ³¡±îÁö Å½»ö
+        // dartResultï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
         while(index < dartResult.length()){
             char now = dartResult.charAt(index);
-            // ÇöÀç À§Ä¡ °ªÀÌ ¹®ÀÚÀÌ°í
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½
             if(now == 'S' || now == 'D' || now == 'T' 
                || now == '#' || now == '*'){
-                // ÇöÀç À§Ä¡°¡ ¹®ÀÚ¿­ÀÇ ¸¶Áö¸· ÀÎµ¦½º¸é ÇöÀç±îÁö ´ã°í ¹Ù·Î break;
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ break;
                 if(index == dartResult.length() - 1){
                     String temp = dartResult.substring(start);
                     results[keyIndex++] = temp;
                     break;
                 }
-                // ´ÙÀ½ À§Ä¡ °ªÀÌ ¼ýÀÚÀÌ¸é ÆÄ½Ì
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½Ä½ï¿½
                 char next = dartResult.charAt(index+1);
                 if('0' <= next && next <= '9') {
                     end = index + 1;
-                    // start ÀÎµ¦½ººÎÅÍ ÆÄ½ÌÇØ °á°ú¸¦ ´ãÀ½
+                    // start ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     String temp = dartResult.substring(start, end);
                     results[keyIndex++] = temp;
-                    // start´Â ±× ´ÙÀ½ ¼ýÀÚ index·Î ´Ù½Ã ¼³Á¤
+                    // startï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ indexï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     start = index + 1;
                 }
             }

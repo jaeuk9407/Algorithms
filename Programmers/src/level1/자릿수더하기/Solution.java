@@ -1,12 +1,12 @@
-package level1.ÀÚ¸´¼ö´õÇÏ±â;
+package level1.ìë¦¿ìˆ˜ë”í•˜ê¸°;
 
 public class Solution {
     public int solution(int n) {
         int answer = 0;
-        // ÁÖ¾îÁø ¼ıÀÚ¸¦ StringÀ¸·Î º¯È¯
+        // ï¿½Ö¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ Stringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         String value = String.valueOf(n);
         
-        // °¢ À§Ä¡ÀÇ ¼ıÀÚ¸¦ intÇüÀ¸·Î º¯È¯ÇØ µ¡¼À ¿¬»ê
+        // ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for(int i = 0; i < value.length(); i++){
             answer += (Integer.valueOf(value.charAt(i)) - '0');
         }

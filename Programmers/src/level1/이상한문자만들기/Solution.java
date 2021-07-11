@@ -1,23 +1,23 @@
-package level1.ÀÌ»óÇÑ¹®ÀÚ¸¸µé±â;
+package level1.ì´ìƒí•œë¬¸ìë§Œë“¤ê¸°;
 
 class Solution {
     public String solution(String s) {
         String answer = "";
         StringBuilder sb = new StringBuilder();
-        // ´Ü¾î ³» ÀÎµ¦½º¸¦ ±â·ÏÇÏ´Â º¯¼ö
+        // ï¿½Ü¾ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
         int count = 0;
         
         for(int i = 0; i < s.length(); i++){
-            // ¹®ÀÚ°¡ °ø¹éÀÌ ¾Æ´Ñ °æ¿ì
+            // ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½
             if(s.charAt(i) != ' '){
-                // Â¦¼ö¹ø ÀÎµ¦½º¶ó¸é ´ë¹®ÀÚ·Î º¯È¯
+                // Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ë¹®ï¿½Ú·ï¿½ ï¿½ï¿½È¯
                 if(count % 2 == 0){
                     sb.append(Character.toUpperCase(s.charAt(i)));
-                }else{  // È¦¼ö¹ø ÀÎµ¦½º¸é ¼Ò¹®ÀÚ·Î º¯È¯
+                }else{  // È¦ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
                     sb.append(Character.toLowerCase(s.charAt(i)));
                 }
                 count++;
-            }else{ // ¹®ÀÚ°¡ °ø¹éÀÎ °æ¿ì
+            }else{ // ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                 count = 0;
                 sb.append(" ");
             }

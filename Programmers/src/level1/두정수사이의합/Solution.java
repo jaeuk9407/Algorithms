@@ -1,4 +1,4 @@
-package level1.µÎÁ¤¼ö»çÀÌÀÇÇÕ;
+package level1.ë‘ì •ìˆ˜ì‚¬ì´ì˜í•©;
 
 class Solution {
     public long solution(int a, int b) {
@@ -6,12 +6,12 @@ class Solution {
         int bigger = Math.max(a, b);
         int smaller = Math.min(a, b);
         
-        // µÎ ¼ö »çÀÌ¿¡ ¼ÓÇÑ ¸ğµç Á¤¼öµéÀÇ ÇÕ
+        // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         for(int i = smaller; i <= bigger; i++){
             answer += i;
         }
         
-        // µÎ ¼ö°¡ °°Àº ¼ö¶ó¸é ±× °ªÀ¸·Î answer¸¦ update
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ answerï¿½ï¿½ update
         if(bigger == smaller){
             answer = smaller;
         }

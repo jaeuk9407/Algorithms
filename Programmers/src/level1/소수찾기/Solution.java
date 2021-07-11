@@ -1,18 +1,18 @@
-package level1.¼Ò¼öÃ£±â;
+package level1.ì†Œìˆ˜ì°¾ê¸°;
 
 class Solution {
     public int solution(int n) {
         int answer = 0;
         boolean[] isNotPrime = new boolean[n + 1];
         
-        // ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ä½ºï¿½×³×½ï¿½ï¿½ï¿½ Ã¼
         for(int i = 2; i * i < n; i++){
             for(int j = 2; i * j <= n; j++){
                 isNotPrime[i * j] = true;
             }
         }
         
-        // ¼Ò¼ö Ä«¿îÆ®
+        // ï¿½Ò¼ï¿½ Ä«ï¿½ï¿½Æ®
         for(int i = 2; i <= n; i++){
             if(!isNotPrime[i]) answer++;
         }

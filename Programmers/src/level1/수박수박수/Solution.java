@@ -1,4 +1,4 @@
-package level1.¼ö¹Ú¼ö¹Ú¼ö;
+package level1.ìˆ˜ë°•ìˆ˜ë°•ìˆ˜;
 
 class Solution {
     public String solution(int n) {
@@ -7,9 +7,9 @@ class Solution {
         
         for(int i = 0; i < n; i++){
             if(i % 2 == 0){
-                sb.append("¼ö");
+                sb.append("ï¿½ï¿½");
             }else{
-                sb.append("¹Ú");
+                sb.append("ï¿½ï¿½");
             }
         }
         answer = sb.toString();

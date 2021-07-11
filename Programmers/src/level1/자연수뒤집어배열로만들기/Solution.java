@@ -1,15 +1,15 @@
-package level1.ÀÚ¿¬¼öµÚÁý¾î¹è¿­·Î¸¸µé±â;
+package level1.ìžì—°ìˆ˜ë’¤ì§‘ì–´ë°°ì—´ë¡œë§Œë“¤ê¸°;
 
 class Solution {
     public int[] solution(long n) {
-        // StringÀ¸·Î º¯È¯
+        // Stringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         String temp = String.valueOf(n);
-        // ÀÚ¸´¼ö ±æÀÌ¿Í °°Àº ¹è¿­ »ý¼º
+        // ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½
         int[] answer = new int[temp.length()];
-        // answer ¹è¿­ÀÇ ÀÎµ¦½º·Î »ç¿ëÇÒ º¯¼ö
+        // answer ï¿½è¿­ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         int index = 0;
         
-        // temp StringÀ» °Å²Ù·Î Å½»öÇÏ¸ç °¢ char °ªÀ» int·Î º¯È¯ÇØ ÀúÀå
+        // temp Stringï¿½ï¿½ ï¿½Å²Ù·ï¿½ Å½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ char ï¿½ï¿½ï¿½ï¿½ intï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for(int i = temp.length() - 1; i >= 0; i--){
             answer[index++] = temp.charAt(i) - '0';
         }

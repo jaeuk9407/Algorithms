@@ -1,11 +1,11 @@
-package level1.¹®ÀÚ¿­´Ù·ç±â±âº»;
+package level1.ë¬¸ìì—´ë‹¤ë£¨ê¸°ê¸°ë³¸;
 
 class Solution {
     public boolean solution(String s) {
         boolean answer = true;
         int len = s.length();
         
-        // ¼ıÀÚ·Î¸¸ ±¸¼ºµÇ¾î ÀÖ´ÂÁö ÆÇº°
+        // ï¿½ï¿½ï¿½Ú·Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½Çºï¿½
         for(int i = 0; i < s.length(); i++){
             char now = s.charAt(i);    
             if(now < '0' || now > '9'){
@@ -14,7 +14,7 @@ class Solution {
             }
         }
         
-        // ±æÀÌ°¡ 4 ¶Ç´Â 6À¸·Î ±¸¼ºµÇ¾î ÀÖ´ÂÁö ÆÇº° 
+        // ï¿½ï¿½ï¿½Ì°ï¿½ 4 ï¿½Ç´ï¿½ 6ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½Çºï¿½ 
         if(len != 4 && len != 6){
             answer = false;
         }

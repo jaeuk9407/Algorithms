@@ -1,4 +1,4 @@
-package level1.¹®ÀÚ¿­³»¸²Â÷¼øÀ¸·Î¹èÄ¡ÇÏ±â;
+package level1.ë¬¸ìì—´ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œë°°ì¹˜í•˜ê¸°;
 
 import java.util.*;
 
@@ -6,13 +6,13 @@ class Solution {
     public String solution(String s) {
         StringBuilder sb = new StringBuilder();
         
-        // Á¤·ÄÀ» À§ÇÑ Character ¹è¿­ »ı¼º & ¹®ÀÚ¿­ º¹»ç
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Character ï¿½è¿­ ï¿½ï¿½ï¿½ï¿½ & ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         Character[] arr = new Character[s.length()];
         for(int i = 0; i < s.length(); i++){
             arr[i] = s.charAt(i);
         }
         
-        // ³»¸²Â÷¼ø Á¤·Ä
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Arrays.sort(arr, new Comparator<Character>(){
            @Override
             public int compare(Character o1, Character o2){
@@ -26,7 +26,7 @@ class Solution {
             }
         });
         
-        // Á¤·ÄµÈ ¹è¿­À» StringÀ¸·Î º¯È¯ÇÏ±â À§ÇØ StringBuilder¿¡ »ğÀÔ
+        // ï¿½ï¿½ï¿½Äµï¿½ ï¿½è¿­ï¿½ï¿½ Stringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ StringBuilderï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for(int i = 0; i < arr.length; i++){
             sb.append(arr[i]);
         }

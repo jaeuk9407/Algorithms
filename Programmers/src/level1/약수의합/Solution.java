@@ -1,4 +1,4 @@
-package level1.¾à¼öÀÇÇÕ;
+package level1.ì•½ìˆ˜ì˜í•©;
 
 class Solution {
     public int solution(int n) {

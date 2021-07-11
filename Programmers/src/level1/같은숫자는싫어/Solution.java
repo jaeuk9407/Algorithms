@@ -1,33 +1,33 @@
-package level1.°°Àº¼ýÀÚ´Â½È¾î;
+package level1.ê°™ì€ìˆ«ìžëŠ”ì‹«ì–´;
 
 import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
         int[] answer = {};
-        // ¼ø¼­´ë·Î ÀúÀåÇÏ±â À§ÇÑ Å¥
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¥
         Queue<Integer> q = new LinkedList<>();
         
-        // ÀÌÀü ÀÎµ¦½ºÀÇ ÀÔ·Â°ªÀ» ÀúÀåÇÒ º¯¼ö
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         int key = -1;
-        // while¹® ¾È¿¡¼­ arrÀ» Å½»öÇÒ index º¯¼ö
+        // whileï¿½ï¿½ ï¿½È¿ï¿½ï¿½ï¿½ arrï¿½ï¿½ Å½ï¿½ï¿½ï¿½ï¿½ index ï¿½ï¿½ï¿½ï¿½
         int index = 0;
         
         while(true){
-            // Á¾·á Á¶°Ç: index == arr.length
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: index == arr.length
             if(index == arr.length){
                 break;
             }
-            // ÀÌÀü ÀÎµ¦½º¿Í ´Ù¸¥ ±ÛÀÚ¶ó¸é Q¿¡ ´ã°í, key¸¦ ÇöÀç ÀÎµ¦½º °ªÀ¸·Î º¯°æ
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ Qï¿½ï¿½ ï¿½ï¿½ï¿½, keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             if(key != arr[index]){
                 q.add(arr[index]);
                 key = arr[index];
             }
-            // ÀÌÀü ÀÎµ¦½º¿Í °°Àº ±ÛÀÚ¸é ¾Æ¹«·± Ã³¸®ÇÏÁö ¾ÊÀ½
-            // µÎ case °øÅëÀûÀ¸·Î ´ÙÀ½ ÀÎµ¦½º·Î ³Ñ¾î°¡¾ß ÇÔ
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Æ¹ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            // ï¿½ï¿½ case ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½ï¿½
             index++;
         }
-        // qÀÇ ¿ø¼Ò¸¦ °á°ú ¹è¿­·Î º¹»ç
+        // qï¿½ï¿½ ï¿½ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         answer = new int[q.size()];
         int i = 0;
         while(!q.isEmpty()){

@@ -1,4 +1,4 @@
-package level1.Á¤¼ö³»¸²Â÷¼øÀ¸·Î¹èÄ¡ÇÏ±â;
+package level1.ì •ìˆ˜ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œë°°ì¹˜í•˜ê¸°;
 
 import java.util.*;
 
@@ -9,12 +9,12 @@ class Solution {
         String str = String.valueOf(n);
         List<Integer> list = new ArrayList<>();
         
-        // list·Î °¢ ÀÚ¸´¼ö ¼ýÀÚ¸¦ ´ã¾ÆÁÜ
+        // listï¿½ï¿½ ï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
         for(int i = 0; i < str.length(); i++){
             list.add(Integer.valueOf(str.charAt(i) - '0'));
         }
         
-        // list ³»¸²Â÷¼øÀ¸·Î Á¤·Ä
+        // list ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Collections.sort(list, new Comparator<Integer>(){
            @Override
             public int compare(Integer o1, Integer o2){
@@ -28,7 +28,7 @@ class Solution {
             }
         });
         
-        // list ¿ø¼Ò¸¦ ¼ø¼­´ë·Î ÀÌ¾îºÙ¿© StringÀ¸·Î ¸¸µç µÚ, LongÀ¸·Î º¯È¯
+        // list ï¿½ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ï¿½Ù¿ï¿½ Stringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, Longï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         for(int i = 0; i < list.size(); i++){
             sb.append(list.get(i));
         }

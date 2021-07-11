@@ -1,4 +1,4 @@
-package level1.¼­¿ï¿¡¼­±è¼­¹æÃ£±â;
+package level1.ì„œìš¸ì—ì„œê¹€ì„œë°©ì°¾ê¸°;
 
 class Solution {
     public String solution(String[] seoul) {
@@ -9,7 +9,7 @@ class Solution {
                 place = i;
             }
         }
-        answer = "±è¼­¹æÀº "+place+"¿¡ ÀÖ´Ù";
+        answer = "ï¿½è¼­ï¿½ï¿½ï¿½ï¿½ "+place+"ï¿½ï¿½ ï¿½Ö´ï¿½";
         return answer;
     }
 }
